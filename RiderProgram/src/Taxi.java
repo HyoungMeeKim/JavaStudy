@@ -1,11 +1,13 @@
-public class Taxi extends Ride implements TaxiMeter{
-    Taxi(int number){
+public class Taxi extends Ride implements TaxiMeter {
+    Taxi(int number) {
         super(number);
         this.name = "택시";
-        System.out.println(this.name+"비용: 미정");
+        System.out.println(this.name + "비용: 미정");
     }
+
     @Override
-    void take() {}
+    void take() {
+    }
 
     @Override
     void take(int total) {
@@ -16,13 +18,13 @@ public class Taxi extends Ride implements TaxiMeter{
 
     @Override
     public int meter(int time) {
-        if (time>50) {
+        if (time > 50) {
             return 20000;
-        } else if (time>30) {
+        } else if (time > 30) {
             return 10000;
-        } else if (time>10) {
+        } else if (time > 10) {
             return 7000;
-        } else{
+        } else {
             return 4000;
         }
     }
